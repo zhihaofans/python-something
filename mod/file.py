@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # -*-coding:utf-8 -*-
 # ProjectName:Zhihaofans的文件模块
-# Url:https://github.com/zhihaofans/python-something
 # Author:zhihaofans
 # PythonVersion:3.x
 import os
@@ -13,7 +12,9 @@ def read(filePath):
         return f.read()
 
 
-def write(filePath, fileData):
+def write(filePath, fileData,stopIfExisted=False):
+    if stopIfExists and exists(filePath):
+        return None
     with open(filePath, "w") as f:
         return f.write(fileData)
 
