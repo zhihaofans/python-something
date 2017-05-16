@@ -13,7 +13,7 @@ def read(filePath):
 
 
 def write(filePath, fileData,stopIfExisted=False):
-    if stopIfExists and exists(filePath):
+    if stopIfExisted and exists(filePath):
         return None
     with open(filePath, "w") as f:
         return f.write(fileData)
